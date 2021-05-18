@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Verlag A','Verlag B';
+  color: #fff;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #141414;
+  border-bottom: 2px solid goldenrod;
+}
+
+.nav :is(.left-nav, .mid-nav, .right-nav) {
+  width: 100%;
+}
+
+.mid-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2rem;
+}
+
+.search {
+  text-align: center;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin: 0px 0.5rem 0px 0.5rem;
+  text-decoration: none;
+  color: #90887c;
+}
+
+.right-nav {
+  text-align: right;
+}
+
+.cart-icon {
+  color: #886735;
+}
+
+.line {
+  border-right: 1px solid #886735;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.img-container {
+  background-image: url("images/Brisket_Web.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
+}
+
+.img-container:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  letter-spacing: .15em;
+  background-color: #fff;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #886735;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 14px 25px;
+  text-align: center;
+  min-width: 160px;
+  font-family: 'Verlag A','Verlag B';
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.slider-btn a.btn.btn--gold.hover--red.white-button {
+  line-height: 26px;
+}
+
+a.btn.btn--gold.hover--red.white-button {
+  background-color: #fff;
+  color: #886735;
+  text-decoration: none;
+}
+
+.btn.btn--gold, .btn:hover {
+  background-color: #886735;
+  color: #fff;
+}
+
+.slider-btn a {
+  vertical-align: middle;
+  display: table;
+  float: left;
+  padding: 15px 50px;
+}
+/*# sourceMappingURL=style.css.map */
