@@ -82,7 +82,7 @@ body {
   -webkit-transition: 0.4s linear ease;
   transition: 0.4s linear ease;
   display: none;
-  padding-bottom: 15%;
+  padding-bottom: 12%;
 }
 
 .active {
@@ -200,41 +200,6 @@ article {
   -webkit-transition: opacity 2400ms ease 0s;
   transition: opacity 2400ms ease 0s;
   z-index: 2;
-}
-
-.dots {
-  z-index: 9999;
-  position: absolute;
-  bottom: 25%;
-  text-align: center;
-  left: 0;
-  right: 0;
-}
-
-.owl-dot {
-  background: 0 0;
-  color: inherit;
-  border: none;
-  padding: 0 !important;
-  font: inherit;
-}
-
-.hm-carousel .owl-dot span {
-  display: block;
-  border: 0;
-  width: 35px;
-  height: 8px;
-  margin: 0 6px;
-  background: #fff;
-  border-radius: 20px;
-}
-
-.hm-carousel .owl-dot.active span {
-  border: 0;
-  width: 35px;
-  height: 8px;
-  background: #d9ab27;
-  border-radius: 20px;
 }
 
 .btn {
