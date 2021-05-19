@@ -24,7 +24,7 @@ body {
           align-items: center;
   background-color: #141414;
   border-bottom: 2px solid goldenrod;
-  padding: 0.5px 4em 0.5em 4em;
+  padding: 0.5em 4em 0.5em 4em;
 }
 
 .nav :is(.left-nav, .mid-nav, .right-nav) {
@@ -44,7 +44,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2rem;
+  margin: 0 auto;
 }
 
 .search {
@@ -187,6 +187,21 @@ article {
   z-index: 10;
 }
 
+.icon-arrow-right {
+  border: solid #886735;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.places {
+  color: #8d8d8d;
+  letter-spacing: 0.03em;
+  margin-left: 16px;
+}
+
 .bg {
   background-image: url("images/4R-family.jpg");
   background-size: cover;
@@ -196,10 +211,33 @@ article {
   position: absolute;
   top: 0;
   width: 100%;
-  opacity: 1;
-  -webkit-transition: opacity 2400ms ease 0s;
-  transition: opacity 2400ms ease 0s;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
   z-index: 2;
+}
+
+footer {
+  background: #1c1c1c;
+  padding: 30px 0 0;
+  width: 100%;
+}
+
+.footer-text-top {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0 0 5%;
+  width: 25%;
+}
+
+footer.a.locations {
+  font-family: "Knockout HTF47-Bantamweight";
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8em;
+  letter-spacing: 0.09em;
+  margin: 0 0 1em;
 }
 
 .btn {
@@ -260,6 +298,42 @@ a.btn.btn--gold.hover--red.white-button:hover {
 .btn.hover--red:hover {
   background: #8f2626;
   color: #fff;
+}
+
+.buttons-sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 30%;
+  /* text-align: center; */
+  left: 0;
+  right: 0;
+}
+
+.slider {
+  display: block;
+  border: 0;
+  width: 35px;
+  height: 8px;
+  margin: 0 6px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.active-slider {
+  border: 0;
+  width: 35px;
+  height: 8px;
+  background: #d9ab27;
+  border-radius: 20px;
 }
 
 @media (max-width: 1439px) {
