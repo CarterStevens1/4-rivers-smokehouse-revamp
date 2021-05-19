@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Verlag A','Verlag B';
+  font-family: "Verlag A", "Verlag B";
   color: #fff;
   margin: 0;
   width: 100vw;
@@ -24,10 +24,20 @@ body {
           align-items: center;
   background-color: #141414;
   border-bottom: 2px solid goldenrod;
+  padding: 0.5px 4em 0.5em 4em;
 }
 
 .nav :is(.left-nav, .mid-nav, .right-nav) {
   width: 100%;
+}
+
+.left-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mid-nav {
@@ -39,11 +49,15 @@ body {
 
 .search {
   text-align: center;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0px 0.5rem 0px 0.5rem;
   text-decoration: none;
   color: #90887c;
+}
+
+.search:hover {
+  color: #a37c3d;
 }
 
 .right-nav {
@@ -58,13 +72,25 @@ body {
   border-right: 1px solid #886735;
 }
 
+.r-logo {
+  height: 40px;
+}
+
 .container {
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.4s linear ease;
+  transition: 0.4s linear ease;
+  display: none;
+  padding-bottom: 15%;
 }
 
-.img-container {
-  background-image: url("images/Brisket_Web.jpg");
+.active {
+  display: block;
+}
+
+.img-container1,
+.img-container2 {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -74,7 +100,16 @@ body {
   z-index: -2;
 }
 
-.img-container:before {
+.img-container1 {
+  background-image: url("images/Brisket_Web.jpg");
+}
+
+.img-container2 {
+  background-image: url("images/brisket-burger.jpg");
+}
+
+.img-container1:before,
+.img-container2:before {
   content: "";
   position: absolute;
   left: 0;
@@ -99,12 +134,113 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 8em;
+  text-align: center;
+}
+
+.catchTitle {
+  font-size: 10.5em;
+  font-family: "Knockout HTF47-Bantamweight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #fff;
+  margin: 0;
+}
+
+.catchTitle:after {
+  content: "";
+  background: #fff;
+  display: block;
+  height: 4px;
+  margin: 40px auto;
+  width: 152px;
+}
+
+.quote {
+  font-family: "Verlag A", "Verlag B";
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 2.25em;
+  letter-spacing: 0.09em;
+  line-height: 40px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.section {
+  background-color: #000;
+  position: relative;
+  padding-top: 10%;
+  height: 45vh;
+}
+
+.section article {
+  text-align: center;
+  width: 100%;
+}
+
+article {
+  position: relative;
+  z-index: 10;
+}
+
+.bg {
+  background-image: url("images/4R-family.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 130%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 2400ms ease 0s;
+  transition: opacity 2400ms ease 0s;
+  z-index: 2;
+}
+
+.dots {
+  z-index: 9999;
+  position: absolute;
+  bottom: 25%;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.hm-carousel .owl-dot span {
+  display: block;
+  border: 0;
+  width: 35px;
+  height: 8px;
+  margin: 0 6px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.hm-carousel .owl-dot.active span {
+  border: 0;
+  width: 35px;
+  height: 8px;
+  background: #d9ab27;
+  border-radius: 20px;
 }
 
 .btn {
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
-  letter-spacing: .15em;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  letter-spacing: 0.15em;
   background-color: #fff;
   border-radius: 3px;
   border: none;
@@ -117,13 +253,19 @@ body {
   padding: 14px 25px;
   text-align: center;
   min-width: 160px;
-  font-family: 'Verlag A','Verlag B';
+  font-family: "Verlag A", "Verlag B";
   font-style: normal;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.slider-btn .min-height {
+  line-height: 26px;
 }
 
 .slider-btn a.btn.btn--gold.hover--red.white-button {
   line-height: 26px;
+  margin-right: 38px;
 }
 
 a.btn.btn--gold.hover--red.white-button {
@@ -132,7 +274,8 @@ a.btn.btn--gold.hover--red.white-button {
   text-decoration: none;
 }
 
-.btn.btn--gold, .btn:hover {
+.btn.btn--gold,
+.btn:hover {
   background-color: #886735;
   color: #fff;
 }
@@ -142,5 +285,62 @@ a.btn.btn--gold.hover--red.white-button {
   display: table;
   float: left;
   padding: 15px 50px;
+}
+
+a.btn.btn--gold.hover--red.white-button:hover {
+  background-color: #8f2626;
+  color: #ffffff;
+}
+
+.btn.hover--red:hover {
+  background: #8f2626;
+  color: #fff;
+}
+
+@media (max-width: 1439px) {
+  .quote {
+    margin-bottom: 40px;
+    line-height: 34px;
+    font-size: 1.5em;
+  }
+  .title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    height: 620px;
+  }
+}
+
+@media (min-width: 700px) {
+  .section {
+    height: 45vh;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .hot-brisket h1 {
+    font-size: 8em;
+    font-family: "Knockout HTF47-Bantamweight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: #fff;
+    margin: 0;
+  }
+  .hot-brisket p {
+    font-family: "Verlag A", "Verlag B";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.09em;
+    line-height: 1.6em;
+    color: #fff;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
