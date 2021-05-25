@@ -5,19 +5,19 @@
 }
 
 body {
-  font-family: "Verlag A", "Verlag B";
+  font-family: "roboto", sans-serif;
   color: #fff;
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
 }
-
+// Nav
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #141414;
-  border-bottom: 2px solid goldenrod;
+  border-bottom: 2px solid #886735;
   padding: 0.5em 4em 0.5em 4em;
 }
 
@@ -67,22 +67,30 @@ body {
 .title {
   margin: 0;
 }
+// End Nav
+.cont {
+  height: 100vh;
+  display: flex;
+}
 
 .container {
-  width: 100%;
-  height: 100%;
-  transition: 0.4s linear ease;
-  display: none;
+  width: 100vw;
+  height: 100vh;
   padding-bottom: 12%;
+  opacity: 0;
+  transition: 0.4s ease;
+  position: absolute;
 }
 
 .active {
-  display: block;
+  opacity: 1;
+  transition: 0.4s ease;
+  z-index: 2;
 }
 
 .img-container1,
 .img-container2 {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-size: cover;
   background-position: center 0;
@@ -93,12 +101,13 @@ body {
 }
 
 .img-container1 {
-  background-image: url("images/Brisket_Web.jpg");
+  background-image: url("images/brisket-burger.jpg");
 }
 
 .img-container2 {
-  background-image: url("images/brisket-burger.jpg");
+  background-image: url("images/Brisket_Web.jpg");
 }
+
 .img-container1:before,
 .img-container2:before {
   content: "";
@@ -111,17 +120,21 @@ body {
   z-index: -1;
 }
 
+img.rewards-logo {
+  margin-top: -0.5em;
+}
+
 .inner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 8em;
+  padding-top: 12em;
   text-align: center;
 }
 
 .catchTitle {
-  font-size: 10.5em;
+  font-size: 15ch;
   font-family: "Knockout HTF47-Bantamweight", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -141,12 +154,12 @@ body {
 }
 
 .quote {
-  font-family: "Verlag A", "Verlag B";
+  font-family: "Knockout HTF47-Bantamweight", sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  font-size: 2.25em;
-  letter-spacing: 0.09em;
+  font-size: 2.35em;
+  letter-spacing: 0.15em;
   line-height: 40px;
   color: #fff;
   margin: 0 0 60px 0;
@@ -183,6 +196,8 @@ article {
   color: #8d8d8d;
   letter-spacing: 0.03em;
   margin-left: 5px;
+  margin: 0 0 0.8em;
+  transition: 0.5s ease;
 }
 
 .bg {
@@ -200,13 +215,14 @@ article {
 
 footer {
   background: #1c1c1c;
-  padding: 30px 0 0;
+  padding: 30px 0 3em;
   width: 100%;
 }
 
-.footer-text-top {
+.footer {
+  margin: 0 auto;
+  max-width: 1080px;
   box-sizing: border-box;
-  padding: 0 0 0 5%;
 }
 
 .footer-locations {
@@ -221,6 +237,7 @@ footer {
 }
 .all-locations {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .col {
@@ -230,6 +247,15 @@ footer {
 
 .col:last-child {
   margin-top: -10px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.places:hover {
+  color: #a37c3d;
 }
 
 // Buttons start
@@ -296,10 +322,11 @@ a.btn.btn--gold.hover--red.white-button:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
   /* text-align: center; */
   left: 0;
   right: 0;
+  z-index: 3;
 }
 
 .slider {
@@ -310,6 +337,7 @@ a.btn.btn--gold.hover--red.white-button:hover {
   margin: 0 6px;
   background: #fff;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .active-slider {
@@ -318,6 +346,7 @@ a.btn.btn--gold.hover--red.white-button:hover {
   height: 8px;
   background: #d9ab27;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 // End of buttons
